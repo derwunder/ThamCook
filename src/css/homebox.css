@@ -1,0 +1,24 @@
+.testgrid{
+  /*background: rgba(187, 55, 125, 1);*/
+  overflow-y: hidden;
+  /*box-sizing: border-box;*/
+  width:100%;
+  height: 100%;
+  /*overflow-wrap: break-word; this one will break words in margin container
+      overflow-y: scroll;
+  */
+
+
+}
+.twitter-widget{
+  margin-top: 10px;
+}
+
+.testgrid div{
+  text-align: left;
+}
+
+.body-xxs{
+  max-width: 200px;
+  margin: auto;
+}

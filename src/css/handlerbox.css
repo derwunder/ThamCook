@@ -1,0 +1,32 @@
+/***** ITEM BOX HANDLER ******/
+.handler-box{
+  cursor: move;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: rgba(187, 55, 125, 1) 0px 0px 15px;
+
+}
+.handler-box svg{
+  width: 40px;
+  height: 40px
+}
+.handler-box  path{
+  fill: rgba(187, 55, 125, 1);
+  stroke-width: 1px;
+}
+
+.react-grid-item > .react-resizable-handle{
+  width: 30px;
+  height: 30px;
+  background: url('../../public/images/resize-arrows.png');
+  background-color: rgba(255, 255, 255, 0.7);
+  background-size: 100% 100%;
+  z-index: 9;
+  border-radius: 50%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  box-shadow: rgba(187, 55, 125, 1) 0px 0px 15px;
+
+}

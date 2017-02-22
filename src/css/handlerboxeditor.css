@@ -1,0 +1,19 @@
+.handler-box-editor{
+  cursor: pointer;
+  position: fixed;
+  left:45px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: rgba(187, 55, 125, 1) 0px 0px 15px;
+
+}
+
+.handler-box-editor svg{
+  width: 40px;
+  height: 40px
+}
+.handler-box-editor  path{
+  fill: rgba(187, 55, 125, 1);
+  stroke-width: 1px;
+}

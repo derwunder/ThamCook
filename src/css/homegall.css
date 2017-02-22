@@ -1,0 +1,26 @@
+
+.image-gallery-slide{
+}
+.image-gallery-image{
+  background-color: #fff;  /*#1E2327 ;/*#E1E1E1;*/
+
+}
+
+.image-gallery-image img{
+  max-height: 330px;
+  max-width: 1240px;
+  height: auto;
+  width: auto;
+margin: 0 auto;
+display: block;
+}
+
+.galbox{
+/*  border-top:  10px solid rgba(255, 255, 255, 0.7);*/
+/*  border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
+display: block;
+margin: auto;
+ max-width: 840px;
+  box-shadow: rgba(187, 55, 125, 1) 0px 0px 20px; /*rgba(0, 0, 0, 0.9) 0px 0px 20px;*/
+
+}
