@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 
 import Router from './Router';
@@ -8,6 +7,8 @@ import firebase from './FireBaseA';
 import {configureStore} from './store/ConfigStore';
 import {login, logout,downloadBoxLayout,startSetHomBoxItems} from './actions/actions';
 import {downloadGallBox} from './actions/actionsHomeBoxItems';
+import {startDownloadRecipeItems} from './actions/actionsRecipeBox';
+
 
 import '../node_modules/react-mdl/extra/material.css';
 import '../node_modules/react-mdl/extra/material.js';
@@ -38,6 +39,7 @@ firebase.auth().onAuthStateChanged(function(user){
 store.dispatch(downloadBoxLayout());
 store.dispatch(startSetHomBoxItems());
 store.dispatch(downloadGallBox());
+store.dispatch(startDownloadRecipeItems());
 
 ReactDOM.render(<Provider store={store}>
   <Router/></Provider>,

@@ -13,7 +13,7 @@ class HomeGallEditor extends Component {
       this.hanleEditor = this.hanleEditor.bind(this);
       this.handleSave = this.handleSave.bind(this);
       this.handleClose = this.handleClose.bind(this);
-      var {dispatch}=this.props;
+      //var {dispatch}=this.props;
       //dispatch(setEditHomeGall({edit:{urlVid:''}}));
       this.onDrop1 = this.onDrop1.bind(this);
       this.onDrop2 = this.onDrop2.bind(this);
@@ -67,12 +67,7 @@ class HomeGallEditor extends Component {
     var {dispatch,homeBoxItemEditorReducer,homeGallReducer} =this.props;
 
     //console.log("EdicionTPB1: "+JSON.stringify(this.state));9
-    console.log("your HGALRED: "+JSON.stringify(homeGallReducer));
-
-    var urlVid="";
-    if(  homeGallReducer.hasOwnProperty(3)){
-      urlVid=homeGallReducer[3]['urlEmb'];
-    }
+    
 
 
     return(

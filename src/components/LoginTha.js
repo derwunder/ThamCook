@@ -40,11 +40,11 @@ class Login extends Component {
     }
     return (
       <div id="login-tha">
-        
+
         <h1>Wellcome</h1>
         <h2>{name}</h2>
         <div>
-          <img src={imgURL}/>
+          <img alt="Profile Pic" src={imgURL}/>
           <p>{textMS}</p>
           <ul>
             <li>

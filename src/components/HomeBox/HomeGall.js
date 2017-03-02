@@ -15,15 +15,12 @@ import {hombeBoxItemInfo} from '../../actions/actionsHomeBoxItems';
 class HomeGall extends Component {
   constructor(props) {
       super(props);
-      var {dispatch}=this.props;
-      dispatch(hombeBoxItemInfo({isOpenDialogGallEdit: false}))
-
       this.renderVideo = this.renderVideo.bind(this);
-
-
-
     }
-
+    componentWillMount(){
+      var {dispatch}=this.props;
+      dispatch(hombeBoxItemInfo({isOpenDialogGallEdit: false}));
+    }
     componentDidMount(){
 
     }
@@ -50,12 +47,15 @@ class HomeGall extends Component {
     );
   }
   render() {
-      var {dispatch, homeGallReducer}=this.props;
+      var { homeGallReducer}=this.props;
 
       var youtube_parser = (url) =>{
-          var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-          var match = url.match(regExp);
-          return (match&&match[7].length==11)? match[7] : false;
+          //var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+          //var match = url.match(regExp);
+          //return (match&&match[7].length===11)? match[7] : false;
+
+          var match = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+          return match[1];
       }
 
       var gallery=[], autoPLAY= false;

@@ -1,4 +1,4 @@
-import firebase, {fireStorageRef,firebaseRef,githubProvider} from '../FireBaseA';
+import  {fireStorageRef,firebaseRef} from '../FireBaseA';
 
 
 export var startHomeBoxItemUp = (newItem,typeBox)=>{
@@ -11,6 +11,12 @@ export var startHomeBoxItemUp = (newItem,typeBox)=>{
       location.reload();
     });
 
+  };
+};
+export var hombeBoxItemInfo = (itemInfo)=>{
+  return {
+    type:'ADD_HOMEBOX_ITEM_INFO',
+    itemInfo
   };
 };
 export var startImageUP = (img,itemInfo) =>{
@@ -28,7 +34,7 @@ export var startImageUP = (img,itemInfo) =>{
 };
 export var startHomeBoxItemUpdate = (id,typeBox, itemUpdates)=>{
   return (dispatch, getState)=>{
-    var uid = getState().authReducer.uid;
+    //var uid = getState().authReducer.uid;
     var homeBoxItemRef = firebaseRef.child(`homeBoxItems/${typeBox}/${id}`); //what is in child()can be write like `todos/${id}` ES6
 
     return homeBoxItemRef.update(itemUpdates).then(()=>{
@@ -43,7 +49,7 @@ export var startGallBoxUpdate = (gallItems)=>{
     var gallBoxItemRef =firebaseRef.child(`homeGall`).set(gallItems);
 
     return gallBoxItemRef.then(()=>{
-      dispatch(homeGallDialogEdit());
+      location.reload();
     });
   };
 };
@@ -105,7 +111,7 @@ export var downloadGallBox = ()=>{
 
 export var startHomeBoxItemDelete = (id,typeBox )=>{
   return (dispatch, getState)=>{
-    var uid = getState().authReducer.uid;
+    //var uid = getState().authReducer.uid;
     var homeBoxItemRef = firebaseRef.child(`homeBoxItems/${typeBox}/${id}`); //what is in child()can be write like `todos/${id}` ES6
 
     return homeBoxItemRef.remove().then(()=>{
@@ -115,12 +121,7 @@ export var startHomeBoxItemDelete = (id,typeBox )=>{
   };
 };
 
-export var hombeBoxItemInfo = (itemInfo)=>{
-  return {
-    type:'ADD_HOMEBOX_ITEM_INFO',
-    itemInfo
-  };
-};
+
 export var homeboxItemDialogDel = ()=>{
   return {type:'DIALOG_HOMEBOX_ITEM_INFO_DEL'};
 };

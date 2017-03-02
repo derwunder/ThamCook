@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {hombeBoxItemInfo,homeboxItemInfoClose,startHomeBoxItemUp,startImageUP} from '../../actions/actionsHomeBoxItems';
 
 import {DialogActions, Button} from 'react-mdl';
-import {RadioGroup, Radio} from 'react-mdl';
 import {List,ListItem,ListItemContent,Textfield,FABButton,Icon} from 'react-mdl';
 
 
@@ -14,13 +13,9 @@ import Dropzone from 'react-dropzone';
 
 
 class AddBoxType2 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-      };*/
-    }
+
     componentWillMount(){
-      var {dispatch} = this.props;
+      //var {dispatch} = this.props;
       //this.handleOpen = this.handleOpen.bind(this);
       this.handleClose = this.handleClose.bind(this);
       //this.handleTypeBox = this.handleTypeBox.bind(this);

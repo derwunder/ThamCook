@@ -5,11 +5,10 @@ import {hombeBoxItemInfo} from '../../actions/actionsHomeBoxItems';
 
 import {Dialog, DialogContent} from 'react-mdl';
 import {RadioGroup, Radio} from 'react-mdl';
+import {FABButton,Icon} from 'react-mdl';
 
 
 //import HomeItem1 from '../HomeItem1';
-import HomeItem2 from '../HomeBox/HomeItem2';
-import HomeItem4 from '../HomeBox/HomeItem4';
 
 import AddBoxType1 from './AddBoxType1';
 import AddBoxType2 from './AddBoxType2';
@@ -54,13 +53,12 @@ class AddBox extends Component {
 
     return(
       <div className="addBox" >
-          <i className="fa fa-plus-square" onClick={this.handleOpen}
-            style={{cursor: 'pointer',
-                    overflow: 'hidden',
-                    marginLeft:'25%',
-                    marginTop:'25%',
-                    fontSize: '58px',
-                    color:'rgba(187, 55, 125, 1)'}}></i>
+        <div style={{position: 'fixed',  bottom: '10px', right: '20px'}}>
+          <FABButton colored ripple onClick={this.handleOpen}>
+            <Icon name="add" />
+          </FABButton>
+        </div>
+
           <Dialog  open={homeBoxItemEditorReducer.isOpenDialogAdd} style={{width:'auto'}}>
          <h4>Nuevo Contenedor</h4>
          <DialogContent>

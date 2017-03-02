@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/homeitem1.css';
+import '../../css/homeitem3.css';
 
 import $ from 'jquery';
 
@@ -9,17 +9,7 @@ import {downloadBoxLayout,setResetHomeBoxLayouts} from '../../actions/actions';
 
 
 class HomeItemTp2 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-        tap: false
-      };*/
-      //this.props.item
-      //typeIcon ,urlImg1, urlImg2, urlImg3,  titulo,subtitulo, texto
 
-
-      //this.handleTap = this.handleTap.bind(this);
-    }
 
 
     componentDidMount(){

@@ -1,4 +1,4 @@
-import firebase, {fireStorageRef,firebaseRef,githubProvider} from '../FireBaseA';
+import firebase, {firebaseRef,githubProvider} from '../FireBaseA';
 
 
 
@@ -37,7 +37,7 @@ export var uploadBoxLayout = ()=>{
         createdAt:moment().unix(),
         completedAt:null
       };*/
-      var uid = getState().authReducer.uid;
+      //var uid = getState().authReducer.uid;
       var homeBoxLayouts = getState().homeBoxReducer;
       var layoutUP= {};
       layoutUP = homeBoxCombiner(homeBoxLayouts,layoutUP,"lgbox","lg");
@@ -56,11 +56,25 @@ export var uploadBoxLayout = ()=>{
   };
 };
 
+export var setResetHomeBoxLayouts = ()=>{
+  return{
+    type:'SET_RESET_HOMEBOX_LAYOUTS'
+  };
+};
+export var setHomeBoxLayouts = (layouts)=>{
+  return{
+    type:'SET_HOMEBOX_LAYOUTS',
+    layouts
+  };
+};
+
 function homBoxCtoL(cLayer,toLocLayer,type){
   for(var key in cLayer[type]){
-    toLocLayer[type].push({
-      ...cLayer[type][key]
-    });
+    if(cLayer[type].hasOwnProperty(key)){
+      toLocLayer[type].push({
+        ...cLayer[type][key]
+      });
+    }
   }
   return toLocLayer;
 }
@@ -85,18 +99,6 @@ export var downloadBoxLayout = ()=>{
     });
 
     /****Fin del Fume aca ****/
-  };
-};
-
-export var setResetHomeBoxLayouts = ()=>{
-  return{
-    type:'SET_RESET_HOMEBOX_LAYOUTS'
-  };
-};
-export var setHomeBoxLayouts = (layouts)=>{
-  return{
-    type:'SET_HOMEBOX_LAYOUTS',
-    layouts
   };
 };
 

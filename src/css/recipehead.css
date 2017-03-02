@@ -1,0 +1,12 @@
+.recipeHead{
+  display: block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.recipeHead h3{
+  font-family: 'cac_champagneregular', 'Georgia', serif;
+  font-size:48px;
+  color:rgba(187, 55, 125, 1);
+  text-shadow: 15px 20px 7px rgba(187, 55, 125, 0.9);
+}

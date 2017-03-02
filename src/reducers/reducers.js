@@ -95,3 +95,49 @@ export var homeBoxItemEditorReducer = (state={}, action)=>{
 
   }
 };
+
+export var recipeBoxReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_RECIPES':
+      return[
+          ...state,
+          ...action.recipeItems
+      ];
+    default:
+      return state;
+  }
+};
+
+export var recipeEditorReducer = (state ={},action) => {
+  switch (action.type) {
+    case 'RECIPE_EDITOR_INFO':
+      return{
+        ...state,
+        ...action.recipeInfo
+      };
+    default:
+      return state;
+  }
+};
+
+export var searchRecipeReducer = (state={searchText:'',searchFavorito:false,searchCategoria:''},action) =>{
+  switch (action.type) {
+    case 'SET_SEARCH_TEXT':
+      return {
+        ...state,
+        ...action.searchText
+      };
+    case 'SET_SEARCH_FAVORITO':
+      return {
+        ...state,
+        searchFavorito:!state.searchFavorito
+      };
+    case 'SET_SEARCH_CATEGORIA':
+      return {
+        ...state,
+        ...action.searchCategoria
+      };
+    default:
+      return state;
+  }
+};

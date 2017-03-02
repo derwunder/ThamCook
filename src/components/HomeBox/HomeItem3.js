@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/homeitem3.css';
 
-import Cooker64 from '../../svg/cooker64.png';
 import Walkway from 'walkway.js';
-
-
-
-
 
 class HomeItem3 extends Component {
   constructor(props) {

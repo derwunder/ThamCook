@@ -1,0 +1,53 @@
+.onerecipe{
+  display: block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.onerecipe h3{
+  font-family: 'cac_champagneregular', 'Georgia', serif;
+  font-size:48px;
+  color:rgba(187, 55, 125, 1);
+  text-shadow: 15px 20px 7px rgba(187, 55, 125, 0.9);
+}
+.fb-comments span, .fb-comments iframe {
+  width: 100%;
+}
+.onerecipe img{
+  /*border: 5px solid rgba(187, 55, 125, 0.6);*/
+  border: 5px solid transparent;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-top-left-radius: 10%;
+  width: 90%;
+  height: auto;
+  max-width: 600px;
+  margin: 10px;
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 10px 4px rgba(187, 55, 125, 0.6);
+
+
+}
+
+.onerecipe h5 {
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 40%;
+  border: 5px solid rgba(29, 1, 16, 0.10);
+  border-top: 0px;
+  border-right: 0px;
+  border-top-left-radius: 10%;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 8px 15px 30px 1px rgba(187, 55, 125, 0.5);
+}
+
+.onerecipe ul {
+  margin-left: 10px;
+  border-bottom-right-radius: 5%;
+    box-shadow: 8px 15px 30px 1px rgba(187, 55, 125, 0.5);
+}
+.onerecipe span {
+  margin-left: 5px;
+}

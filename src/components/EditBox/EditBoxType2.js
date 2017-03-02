@@ -6,7 +6,6 @@ homeboxItemDialogDel,startImageUP,startHomeBoxItemDelete,
 startHomeBoxItemUpdate} from '../../actions/actionsHomeBoxItems';
 
 import {Dialog, DialogContent,DialogActions, Button} from 'react-mdl';
-import {RadioGroup, Radio} from 'react-mdl';
 import {List,ListItem,ListItemContent,Textfield,FABButton,Icon} from 'react-mdl';
 
 
@@ -16,13 +15,9 @@ import Dropzone from 'react-dropzone';
 
 
 class EditBoxType2 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-      };*/
-    }
+
     componentWillMount(){
-      var {dispatch} = this.props;
+      //var {dispatch} = this.props;
       //this.handleOpen = this.handleOpen.bind(this);
       this.handleClose = this.handleClose.bind(this);
       //this.handleTypeBox = this.handleTypeBox.bind(this);
@@ -75,7 +70,7 @@ class EditBoxType2 extends Component {
       var {dispatch} = this.props;
       dispatch(homeboxItemDialogDel());
     }
-    
+
     componentDidMount(){
 
     }

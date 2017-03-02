@@ -11,7 +11,7 @@ import '../css/homeitem1.css';
 
 import Dropzone from 'react-dropzone';
 
-import firebase, {firebaseRef,fireStorageRef} from '../FireBaseA';
+import  {fireStorageRef} from '../FireBaseA';
 
 var preview="";
 
@@ -66,8 +66,7 @@ class ImgUploaderTest extends Component {
           multiple={false}
           accept={'image/*'}
           onDrop={this.onDrop}>
-              <div>Try dropping some files here, or click to select files to upload.</div>
-                <img src={preview}/>
+                <img alt="Try drop" src={preview}/>
         </Dropzone>
 
       </div>

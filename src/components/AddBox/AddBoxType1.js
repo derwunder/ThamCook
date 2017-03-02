@@ -18,12 +18,7 @@ import Dropzone from 'react-dropzone';
 var tmpImg1,tmpImg2,tmpImg3;
 
 class AddBoxType1 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-      };*/
-      console.log('A simple svg: '+BookSvg);
-    }
+
     componentWillMount(){
       var {dispatch} = this.props;
       dispatch(hombeBoxItemInfo({typeIcon: 'tpi1'}));

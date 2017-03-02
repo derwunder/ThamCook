@@ -28,13 +28,14 @@ class HandlerBoxEditor extends Component {
       dispatch(hombeBoxItemInfo({subtitulo: (item.subtitulo)?item.subtitulo:''}));
       dispatch(hombeBoxItemInfo({texto:(item.texto)?item.texto:''}));
     }
+    
     componentDidMount(){
     }
   render(){
     var {homeBoxItemEditorReducer} =this.props;
 
     //console.log("EdicionTPB1: "+JSON.stringify(this.state));
-    console.log("TIPO BOx: "+this.props.item.typeBox);
+  //  console.log("TIPO BOx: "+this.props.item.typeBox);
 
 
     return(
@@ -72,14 +73,14 @@ class HandlerBoxEditor extends Component {
            {
              (this.props.item)?
                 ((homeBoxItemEditorReducer.typeBox==='tpb1' )?
-                  <EditBoxType1 item={this.props.item}/>
+                  <EditBoxType1 />
                 : null)
              :<div/>
            }
            {
              (this.props.item)?
                 ((homeBoxItemEditorReducer.typeBox==='tpb2' )?
-                  <EditBoxType2 item={this.props.item}/>
+                  <EditBoxType2 />
                 :null)
              :<div/>
            }

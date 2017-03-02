@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 //import '../css/homeitem1.css';
 
+import { Timeline } from 'react-twitter-widgets'
+
 class TwitterBox extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-        tap: false
-      };*/
-    //  this.onVisible = this.onVisible.bind(this);
-    }
+
 
     componentDidMount(){
+
+    }
+    componentWillMount(){
 
     }
   render(){
 
     return(
       <div className="twitter-widget">
-        <a className="twitter-timeline"  href="https://twitter.com/Derwunder"
+        <Timeline
+            dataSource={{
+              sourceType: 'profile',
+              screenName: 'derwunder'
+            }}
+            options={{
+              height: '300'
+            }}
+            onLoad={() => {}}
+          />
+        {/*<a className="twitter-timeline"  href="https://twitter.com/Derwunder"
         data-widget-id="507356316059181056">Tweets por @Derwunder.</a>
         {
           !function(d,s,id){
@@ -28,6 +37,7 @@ class TwitterBox extends Component {
             fjs.parentNode.insertBefore(js,fjs);}
           }(document,"script","twitter-wjs")
         }
+        */}
       </div>
     );
   }

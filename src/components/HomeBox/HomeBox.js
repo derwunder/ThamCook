@@ -11,15 +11,11 @@ var ResponsiveReactGridLayout = WidthProvider(Responsive);
 import '../../../node_modules/react-grid-layout/css/styles.css';
 import '../../../node_modules/react-resizable/css/styles.css';
 
-import HomeItem1 from './HomeItem1';
-import HomeItem2 from './HomeItem2';
-import HomeItem3 from './HomeItem3';
-import HomeItem4 from './HomeItem4';
+
 import HandlerBox from './HandlerBox';
 import HandlerBoxEditor from './HandlerBoxEditor';
 import TwitterBox from '../TwitterBox';
 import AddBox from '../AddBox/AddBox';
-import ImgUploaderTest from '../ImgUploaderTest';
 
 
 import HomeItemTp1 from './HomeItemTp1';
@@ -32,21 +28,22 @@ import {hombeBoxItemInfo} from '../../actions/actionsHomeBoxItems';
 class HomeBox extends Component {
   constructor(props) {
       super(props);
-      this.state = {
-        tap: false
-      };
+
       //this.handleTap = this.handleTap.bind(this);
       this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
-      this.homeBoxCombiner = this.homeBoxCombiner.bind(this);
-      this.homBoxCtoL = this.homBoxCtoL.bind(this);
+      //this.homeBoxCombiner = this.homeBoxCombiner.bind(this);
+      ///this.homBoxCtoL = this.homBoxCtoL.bind(this);
 
+
+
+    }
+    componentWillMount(){
       var {dispatch} =this.props;
       dispatch(hombeBoxItemInfo({isOpenDialogAdd: false}));
       dispatch(hombeBoxItemInfo({isOpenDialogEdit: false}));
       dispatch(hombeBoxItemInfo({isOpenDialogDel: false}));
       dispatch(hombeBoxItemInfo({typeBox: 'tpb1'}));
       dispatch(hombeBoxItemInfo({typeIcon: 'tpi1'}));
-
     }
     componentDidMount(){
       $('.handler-box').addClass('editor_off');
@@ -64,7 +61,7 @@ class HomeBox extends Component {
       //window.resizeTo(window.screen.width-1,window.screen.height-1);
 
     }
-    homeBoxCombiner(layerbox,objectBox,keyName,type){
+    /*homeBoxCombiner(layerbox,objectBox,keyName,type){
 
       var helperSTR="{";
       for(var j=0; j < layerbox[type].length; j++){
@@ -91,10 +88,10 @@ class HomeBox extends Component {
         });
       }
       return toLocLayer;
-    }
+    }*/
     render() {
     //  console.log("Res Provider: "+Responsive);
-    var layoutLgMd = [
+  /*  var layoutLgMd = [
     {i: '1', x: 0, y: 0, w: 6, h: 6, static:false },
     {i: '2', x: 0, y: 1, w: 6, h: 6, static:false },
     {i: '3', x: 7, y: 1, w: 2, h: 2, static:false },
@@ -120,7 +117,7 @@ class HomeBox extends Component {
     {i: '4', x: 2, y: 3, w: 2, h: 9, static:false }
     ];
     var layoutsPack = { lg:layoutLgMd,md:layoutLgMd,sm:layoutSm, xs:layoutXs, xxs:layoutXxs};
-
+*/
     var heightPX = 38;
 
 
@@ -213,7 +210,7 @@ class HomeBox extends Component {
 
         };
 
-    var homeItemsTpb1Load = (item,index)=>{
+  /*  var homeItemsTpb1Load = (item,index)=>{
       return <div key={item.id}><div className="testgrid">
             <HandlerBox/><HandlerBoxEditor  item={item}/><HomeItemTp1  item={item} /></div></div>;
     };
@@ -221,7 +218,7 @@ class HomeBox extends Component {
     var homeItemsTpb2Load = (item,index)=>{
       return <div key={item.id}><div className="testgrid">
             <HandlerBox/><HandlerBoxEditor  item={item}/><HomeItemTp2  item={item} /></div></div>;
-    };
+    };*/
     /*var createLinkItem = function(item,index){
       return <NavItem2 key={item.title + index} href={item.href} svgPath={item.svgPath}/>;
     };
@@ -230,7 +227,7 @@ class HomeBox extends Component {
 {this.props.navData.map(createLinkItem)} */
 
 
-      return (
+      return (<div>
         <ResponsiveReactGridLayout
            className="layout"
            layouts={homeBoxReducer}
@@ -271,10 +268,6 @@ class HomeBox extends Component {
            cols={{lg: 8, md: 8, sm: 6, xs: 4, xxs: 2}}>
 
 
-
-      <div key={"7"}>
-        <AddBox/>
-      </div>
       <div className="testgrid" key={"4"}>
             <HandlerBox/>
             <TwitterBox/>
@@ -285,6 +278,8 @@ class HomeBox extends Component {
       {parsedItemsTpb2.map(homeItemsTpb2Load)*/}
 
         </ResponsiveReactGridLayout>
+        <AddBox/>
+      </div>
       );
     }
   }

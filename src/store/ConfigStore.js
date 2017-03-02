@@ -2,7 +2,8 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 import {authReducer,homeBoxReducer,homeBoxItemsReducer,
-  homeBoxItemEditorReducer,homeGallReducer} from '../reducers/reducers';
+  homeBoxItemEditorReducer,homeGallReducer,
+  recipeBoxReducer,recipeEditorReducer,searchRecipeReducer} from '../reducers/reducers';
 
 export var configureStore = (initialState = {}) =>{
   var reducer= redux.combineReducers({
@@ -10,7 +11,10 @@ export var configureStore = (initialState = {}) =>{
     homeGallReducer:homeGallReducer,
     homeBoxReducer: homeBoxReducer,
     homeBoxItemsReducer:homeBoxItemsReducer,
-    homeBoxItemEditorReducer: homeBoxItemEditorReducer
+    homeBoxItemEditorReducer: homeBoxItemEditorReducer,
+    recipeBoxReducer:recipeBoxReducer,
+    recipeEditorReducer:recipeEditorReducer,
+    searchRecipeReducer:searchRecipeReducer
   });
 
   var store = redux.createStore(

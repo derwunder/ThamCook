@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../css/addbox.css';
 import {connect} from 'react-redux';
 import {hombeBoxItemInfo,homeboxItemDialogEdit,
-  homeboxItemDialogDel,startHomeBoxItemUp,startHomeBoxItemDelete,
+  homeboxItemDialogDel,startHomeBoxItemDelete,
   startImageUP,startHomeBoxItemUpdate} from '../../actions/actionsHomeBoxItems';
 
 import {Dialog, DialogContent,DialogActions, Button} from 'react-mdl';
@@ -20,16 +20,11 @@ import Dropzone from 'react-dropzone';
 var tmpImg1,tmpImg2,tmpImg3;
 
 class EditBoxType1 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-      };*/
 
-    }
     componentWillMount(){
-      var {dispatch} = this.props;
-      var item = this.props.item;
-      console.log('Dialog EItem: '+JSON.stringify(item));
+      //var {dispatch} = this.props;
+      //var item = this.props.item;
+      //console.log('Dialog EItem: '+JSON.stringify(item));
       //this.handleOpen = this.handleOpen.bind(this);
       //this.handleTypeBox = this.handleTypeBox.bind(this);
       this.handleTypeIcon = this.handleTypeIcon.bind(this);

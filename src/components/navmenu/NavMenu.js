@@ -30,7 +30,7 @@ class NavMenu extends Component {
           duration: 5500,
           easing: 'easeInOutCubic'
         }).draw(function() {
-          console.dir('Finished diamond!');
+          //console.dir('Finished diamond!');
         });
     }
     handleTap(){
@@ -60,6 +60,8 @@ class NavMenu extends Component {
         $('.handler-box').removeClass('editor_off');
         $('.handler-box-editor').removeClass('editor_off');
         $('.handler-gall-editor').removeClass('editor_off');
+        $('.addRecipe').removeClass('editor_off');
+        $('.editRecipe').removeClass('editor_off');
         $('.react-resizable-handle').removeClass('editor_off');
         $('.addBox').removeClass('editor_off');
         dispatch(editorMode());
@@ -70,6 +72,8 @@ class NavMenu extends Component {
         $('.handler-box').addClass('editor_off');
         $('.handler-box-editor').addClass('editor_off');
         $('.handler-gall-editor').addClass('editor_off');
+        $('.addRecipe').addClass('editor_off');
+        $('.editRecipe').addClass('editor_off');
         $('.react-resizable-handle').addClass('editor_off');
         $('.addBox').addClass('editor_off');
         dispatch(editorMode());
@@ -92,13 +96,13 @@ class NavMenu extends Component {
     if(authReducer.pass){
       //console.log("pass Existe");
       classImen="fa fa-arrows";
-      var classImen2="fa fa-hand-pointer-o";
+      classImen2="fa fa-hand-pointer-o";
     //  d.classList.add("fa-hand-pointer-o");
 
     }else{
       //console.log("pass Inexistente");
       classImen="fa fa-comment";
-      var classImen2="fa";
+      classImen2="fa";
       //d.classList.remove("fa-hand-pointer-o");
     }
           //dispatch(startSetHomeBoxLayouts(testObject));
@@ -116,7 +120,7 @@ class NavMenu extends Component {
             <i className={classImen}></i>
             <i id="editor-mode" className={classImen2} /></Link>
           <Link  to="/3" className="menu-item"><i className="fa fa-gift"></i></Link>
-          <Link  to="/2" className="menu-item"><i className="fa fa-book"></i></Link>
+          <Link  to="/Recipes" className="menu-item"><i className="fa fa-book"></i></Link>
           <Link  to="/" className="menu-item"><i className="fa fa-home"></i></Link>
 
 

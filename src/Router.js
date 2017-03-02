@@ -4,11 +4,13 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import PageMain from './views/PageMain';
 import Home from './views/Home';
+import Recipes from './views/Recipes';
+import OneRecipe from './views/OneRecipe';
 import LoginTha from './components/LoginTha';
 
-import firebase from './FireBaseA';
+//import firebase from './FireBaseA';
 
-var requireLogin = (nextState, replace, next) => {
+/*var requireLogin = (nextState, replace, next) => {
   if (!firebase.auth().currentUser) {
     replace('/');
   }
@@ -20,7 +22,7 @@ var requireLogout = (nextState,replace,next)=>{
     replace('/');
   }
     next();
-};
+};*/
 
 
 
@@ -31,7 +33,11 @@ class Routes extends Component {
       <Router history={hashHistory}>
         <Route path="/" component={PageMain}>
           <IndexRoute component={Home}/>
-          {/*<Route path="todos" component={TodoApp} onEnter={requireLogin}/>
+          <Route path="/Recipes" component={Recipes}/>
+          <Route path="/Recipes/:repId" component={OneRecipe}/>
+
+          {/* //this.props.params.repId will give u the the Id componnet need it
+            <Route path="todos" component={TodoApp} onEnter={requireLogin}/>
           <IndexRoute component={Login} onEnter={requireLogout}/>
 
           DERNV example

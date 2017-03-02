@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/homeitem1.css';
 
-import Cooker64 from '../../svg/cooker64.png';
 import Walkway from 'walkway.js';
 
 import ImageGallery from 'react-image-gallery';

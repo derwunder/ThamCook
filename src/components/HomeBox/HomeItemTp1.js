@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/homeitem1.css';
 
-import Walkway from 'walkway.js';
-import BookSvg from '../../svg/book-cover.svg';
-import CupCake from '../../svg/cupcake.svg';
-import ChefFam from '../../svg/female-chef.svg';
-
 import TpI1 from '../svgCom/TpI1';
 import TpI2 from '../svgCom/TpI2';
 import TpI3 from '../svgCom/TpI3';
@@ -22,18 +17,6 @@ import {downloadBoxLayout,setResetHomeBoxLayouts} from '../../actions/actions';
 
 
 class HomeItemTp1 extends Component {
-  constructor(props) {
-      super(props);
-      /*this.state = {
-        tap: false
-      };*/
-      //this.props.item
-      //typeIcon ,urlImg1, urlImg2, urlImg3,  titulo,subtitulo, texto
-
-
-      //this.handleTap = this.handleTap.bind(this);
-    }
-
 
     componentDidMount(){
       $('.handler-box').addClass('editor_off');
@@ -54,15 +37,15 @@ class HomeItemTp1 extends Component {
         images.push({original:this.props.item[key]}); helperCount++;
 //        console.log('Img arry: '+JSON.stringify({[key]:this.props.item[key]}));
       }
-    } if(helperCount==0){styleWidth={width:'390px'};}
+    } if(helperCount===0){styleWidth={width:'390px'};}
 
     return(
       <div className="home-item" style={styleWidth} >
         <div className="bl_inline">
 
-          {(this.props.item.typeIcon=='tpi1')?<TpI1/>:<div/>}
-          {(this.props.item.typeIcon=='tpi2')?<TpI2/>:<div/>}
-          {(this.props.item.typeIcon=='tpi3')?<TpI3/>:<div/>}
+          {(this.props.item.typeIcon==='tpi1')?<TpI1/>:<div/>}
+          {(this.props.item.typeIcon==='tpi2')?<TpI2/>:<div/>}
+          {(this.props.item.typeIcon==='tpi3')?<TpI3/>:<div/>}
 
           <div className="item-box-title">
             <h3>{this.props.item.titulo} </h3>

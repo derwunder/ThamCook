@@ -10,7 +10,7 @@ class TpI3 extends Component {
       duration: 1500,
       easing: 'easeInOutCubic'
     }).draw(function() {
-      console.dir('Finished diamond!');
+      //console.dir('Finished diamond!');
     });
   }
   render(){
