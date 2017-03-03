@@ -40,6 +40,12 @@ border-radius: 2px;
 .tpi3 path{
   stroke-width:2px;
 }
+.tpi4 path{
+  stroke-width:6px;
+}
+.tpi5 path{
+  stroke-width:8px;
+}
 
 .home-item path, .home-item polygon, .home-item circle {
   fill: transparent;

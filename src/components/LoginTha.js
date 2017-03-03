@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {startLogin,startLogout} from '../actions/actions';
+import {startLoginGitHub,startLoginFace,startLogout} from '../actions/actions';
 
 import '../css/logintha.css';
 
@@ -12,12 +12,17 @@ class Login extends Component {
     /*this.state = {
       hover: false
     };*/
-   this.onLogin = this.onLogin.bind(this);
+   this.onLoginGit = this.onLoginGit.bind(this);
    this.onLogout = this.onLogout.bind(this);
+   this.onLoginFace=this.onLoginFace.bind(this);
   }
-  onLogin(){
+  onLoginGit(){
     var {dispatch} = this.props;
-    dispatch(startLogin());
+    dispatch(startLoginGitHub());
+  }
+  onLoginFace(){
+    var {dispatch} = this.props;
+    dispatch(startLoginFace());
   }
   onLogout(){
     var {dispatch} = this.props;
@@ -27,16 +32,19 @@ class Login extends Component {
 
     var {authReducer} = this.props;
     var name="Log In", imgURL="", textMS="Inicia sesion rapido y seguro";
-    var classGH="fa fa-github", classLO="fa fa-sign-out";
-    if(authReducer.email){
+    var classGH="fa fa-github", classLO="fa fa-sign-out", classFA="fa-facebook-official";
+    if(authReducer.uid){
       name=authReducer.displayName;
       imgURL=authReducer.photoURL;
       textMS="Inicio Satisfactorio. Click en Home para administrar";
       classGH="fa ";
       classLO="fa fa-sign-out";
+      classFA="fa "
     }else{
+      imgURL="https://firebasestorage.googleapis.com/v0/b/thamcook.appspot.com/o/images%2FScreenshot_20170302-203202.png?alt=media&token=3c589ec6-cab6-43ec-b4b4-38d502d8c079";
       classGH="fa fa-github";
       classLO="fa ";
+      classFA="fa fa-facebook-official"
     }
     return (
       <div id="login-tha">
@@ -51,7 +59,10 @@ class Login extends Component {
                 <Link  to="/" className=""><i className="fa fa-home" /></Link>
             </li>
             <li>
-              <Link onClick={this.onLogin} to="" className=""><i id="gh" className={classGH} /></Link>
+              <Link onClick={this.onLoginFace} to="" className=""><i id="fa" className={classFA} /></Link>
+            </li>
+            <li>
+              <Link onClick={this.onLoginGit} to="" className=""><i id="gh" className={classGH} /></Link>
             </li>
             <li>
               <Link  onClick={this.onLogout} to="" className=""><i id="lo" className={classLO} /></Link>

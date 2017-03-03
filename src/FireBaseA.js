@@ -13,6 +13,7 @@ try {
 
 }
 export var githubProvider = new firebase.auth.GithubAuthProvider();
+export var faceBookProvider = new firebase.auth.FacebookAuthProvider();
 export var firebaseRef =   firebase.database().ref();
 export var fireStorageRef = firebase.storage().ref();
 export default firebase;

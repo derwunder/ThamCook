@@ -4,6 +4,8 @@ import '../../css/homeitem1.css';
 import TpI1 from '../svgCom/TpI1';
 import TpI2 from '../svgCom/TpI2';
 import TpI3 from '../svgCom/TpI3';
+import TpI4 from '../svgCom/TpI4';
+import TpI5 from '../svgCom/TpI5';
 
 import ImageGallery from 'react-image-gallery';
 import $ from 'jquery';
@@ -46,6 +48,8 @@ class HomeItemTp1 extends Component {
           {(this.props.item.typeIcon==='tpi1')?<TpI1/>:<div/>}
           {(this.props.item.typeIcon==='tpi2')?<TpI2/>:<div/>}
           {(this.props.item.typeIcon==='tpi3')?<TpI3/>:<div/>}
+          {(this.props.item.typeIcon==='tpi4')?<TpI4/>:<div/>}
+          {(this.props.item.typeIcon==='tpi5')?<TpI5/>:<div/>}
 
           <div className="item-box-title">
             <h3>{this.props.item.titulo} </h3>

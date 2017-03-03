@@ -1,4 +1,4 @@
-import firebase, {firebaseRef,githubProvider} from '../FireBaseA';
+import firebase, {firebaseRef,githubProvider,faceBookProvider} from '../FireBaseA';
 
 
 
@@ -50,7 +50,7 @@ export var uploadBoxLayout = ()=>{
 
 
     return homeBoxRef.then(()=>{
-      console.log("enviado");
+      //console.log("enviado");
     });
 
   };
@@ -137,9 +137,23 @@ export var login = (userData)=>{
   };
 };
 
-export var startLogin = ()=>{
+export var startLoginGitHub = ()=>{
   return (dispatch, getState)=>{
       return firebase.auth().signInWithPopup(githubProvider)
+        .then(
+          function(result) {
+            console.log('Login Worked: ', result);
+          })
+        .catch(
+          function(error) {
+            console.log('Login unable: ', error);
+          }
+      );
+    };
+};
+export var startLoginFace = ()=>{
+  return (dispatch, getState)=>{
+      return firebase.auth().signInWithPopup(faceBookProvider)
         .then(
           function(result) {
             console.log('Login Worked: ', result);

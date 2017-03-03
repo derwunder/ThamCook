@@ -6,6 +6,7 @@ import FacebookProvider, { Comments } from 'react-facebook';
 import '../../css/onerecipebox.css';
 import {List,ListItem,Icon} from 'react-mdl';
 
+import {startCheckIfRecipeExist} from '../../actions/actionsRecipeBox';
 
 
 class OneRecipeBox extends Component {
@@ -13,6 +14,9 @@ class OneRecipeBox extends Component {
     super(props);
 
     this.renderVideo=this.renderVideo.bind(this);
+
+    var {dispatch}=this.props;
+    dispatch(startCheckIfRecipeExist(this.props.repId));
   }
   componentWillMount(){
 

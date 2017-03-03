@@ -13,6 +13,9 @@ import {List,ListItem,ListItemContent,Textfield,FABButton,Icon} from 'react-mdl'
 import BookSvg from '../../svg/book-cover.svg';
 import CupCake from '../../svg/cupcake.svg';
 import ChefFam from '../../svg/female-chef.svg';
+import AddSvg from '../../svg/add.svg';
+import HourGlass from '../../svg/hourglass.svg';
+
 
 import Dropzone from 'react-dropzone';
 
@@ -120,6 +123,8 @@ class EditBoxType1 extends Component {
                         <Radio value="tpi1" ripple ><img alt="Click or Drop Img" src={BookSvg} style={{width:'40px',height:'40px'}} /></Radio>
                         <Radio value="tpi2" ripple ><img alt="Click or Drop Img" src={CupCake} style={{width:'40px',height:'40px'}} /></Radio>
                         <Radio value="tpi3" ripple ><img alt="Click or Drop Img" src={ChefFam} style={{width:'40px',height:'40px'}} /></Radio>
+                        <Radio value="tpi4" ripple ><img alt="Click or Drop Img" src={AddSvg} style={{width:'40px',height:'40px'}} /></Radio>
+                        <Radio value="tpi5" ripple ><img alt="Click or Drop Img" src={HourGlass} style={{width:'40px',height:'40px'}} /></Radio>
                       </RadioGroup>
                     </ListItemContent>
                   </ListItem>

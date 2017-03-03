@@ -66,6 +66,24 @@ export var startDownloadRecipeItems = ()=>{
   };
 };
 
+export var startCheckIfRecipeExist = (id) =>{
+  return (dispatch,getState) =>{
+    var recipeItemRef =firebaseRef.child(`recipeItems/${id}`);
+    return recipeItemRef.once('value').then((snapshot) =>{
+      var recipeItem= snapshot.val()||{};
+      if(recipeItem.hasOwnProperty('titulo')){
+        //console.log("You r able to");
+      }else{
+        //location.href = "localhost:3000/#/Recipes";
+        //location.reload();
+        //console.log("You r NOT able to");
+        window.location.href='http://localhost:3000/#/Recipes';
+        //location.reload('http://localhost:3000/#/Recipes');
+      }
+    });
+  };
+}
+
 export var setRecipeSearchText = (searchText)=>{
   return {
     type:'SET_SEARCH_TEXT',
