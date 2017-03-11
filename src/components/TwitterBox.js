@@ -19,7 +19,7 @@ class TwitterBox extends Component {
         <Timeline
             dataSource={{
               sourceType: 'profile',
-              screenName: 'derwunder'
+              screenName: 'thama111'
             }}
             options={{
               height: '300'

@@ -135,7 +135,7 @@ class OneRecipeBox extends Component {
 
         <div style={{width:'100%'}}>
         <FacebookProvider appID="1427254193961203">
-                <Comments href={"https://192.168.0.14:3000/#/Recipes/"+this.props.repId} />
+                <Comments href={"http://thamcook.dernv.com/#/Recipes/"+this.props.repId} />
               </FacebookProvider></div>
 
         {/*}<div className="fb-comments"

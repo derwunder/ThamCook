@@ -23,7 +23,12 @@ var store = configureStore();
 
 firebase.auth().onAuthStateChanged(function(user){
   if(user){
-    var pass = ("der.wunder.nv@gmail.com"===user.email) ? true : false;
+    var pass = false;
+     if("der.wunder.nv@gmail.com"===user.email){
+       pass=true;
+     }else if("tnunez111@yahoo.es"===user.email){
+       pass=true;
+     }
     var editorMode = false;
     var userData ={uid:user.uid,email:user.email,displayName:user.displayName,photoURL:user.photoURL,pass:pass,editorMode:editorMode};
     //console.log("User UID: "+JSON.stringify(user));

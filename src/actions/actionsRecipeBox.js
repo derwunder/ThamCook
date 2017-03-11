@@ -77,7 +77,7 @@ export var startCheckIfRecipeExist = (id) =>{
         //location.href = "localhost:3000/#/Recipes";
         //location.reload();
         //console.log("You r NOT able to");
-        window.location.href='http://localhost:3000/#/Recipes';
+        window.location.href='http://thamcook.dernv.com/#/Recipes';
         //location.reload('http://localhost:3000/#/Recipes');
       }
     });
